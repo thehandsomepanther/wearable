@@ -1,2 +1,4 @@
 *.pyc
 secrets.py
+secrets.js
+node_modules/*
