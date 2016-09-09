@@ -81,7 +81,6 @@ const actions = {
 
       context.forecast = getForecast(context);
       context.outfit = makeOutfit(context);
-      console.log(JSON.stringify(context));
       return resolve(context)
     });
   }
@@ -100,6 +99,7 @@ function getForecast({datetime, location}) {
   console.log(url);
   request(url, function(error, response, body) {
     if (!error && response.statusCode == 200) {
+      console.log(body);
       return body
     }
   });
